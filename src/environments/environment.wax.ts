@@ -23,7 +23,7 @@ export const environment = {
        totalBalance: 'ALA',
        convertToUSD: true,
        customBalance: false,
-       logo: '/assets/images/wax.png',
+       logo: '/assets/images/aladin.png',
        name: {
           big: 'Aladin',
           small: 'Explorer'
@@ -33,7 +33,7 @@ export const environment = {
               { name: 'Europechain', url: 'https://xec.eosweb.net', active: false },
               { name: 'ALA', url: 'https://wax.eosweb.net', active: true }],
        disableNets: false,
-       voteDonationAcc: 'cryptolions1',
+       voteDonationAcc: 'lonprdcr',
        disableVoteDonation: false,
        version: '1.0.0',
        producers: 1000,
