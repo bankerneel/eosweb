@@ -8,7 +8,7 @@ let config = {};
 config.PROD = false;
 
 // mongo uri and options
-config.MONGO_URI = process.env.MONGO_URI || 'mongodb://172.31.21.56:27017/AladinWeb';
+config.MONGO_URI = process.env.MONGO_URI || 'mongodb://172.31.21.56:27017/7bpchain';
 config.MONGO_OPTIONS = {
     socketTimeoutMS: 30000,
     keepAlive: true,
