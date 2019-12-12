@@ -102,7 +102,7 @@ export class MainService {
 
   calculateEosFromVotes(votes){
       let date = +new Date() / 1000 - 946684800; // 946... start timestamp
-      if (this.frontConfig.coin === 'WAX'){
+      if (this.frontConfig.coin === 'ALA'){
         let weight = parseInt(`${ date / (86400 * 7) }`, 10) / 13;
         return votes / (2 ** weight) / 100000000;
       }

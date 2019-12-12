@@ -1,7 +1,7 @@
 const chain = '1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4';
 export const environment = {
     production: true,
-    appName: 'WAXweb',
+    appName: 'ALAweb',
     network: {
         blockchain: 'eos',
         host: 'wax.cryptolions.io',
@@ -17,10 +17,10 @@ export const environment = {
         verbose: false
     },
     frontConfig: {
-       coin: 'WAX',
+       coin: 'ALA',
        bp: 'bp.json',
        tokenContract: 'eosio.token',
-       totalBalance: 'WAX',
+       totalBalance: 'ALA',
        convertToUSD: true,
        customBalance: false,
        logo: '/assets/images/wax.png',
@@ -31,7 +31,7 @@ export const environment = {
        nets: [{ name: 'Mainnet', url: 'https://eosweb.net', active: false },
               { name: 'Jungle', url: 'https://jungle.eosweb.net', active: false },
               { name: 'Europechain', url: 'https://xec.eosweb.net', active: false },
-              { name: 'WAX', url: 'https://wax.eosweb.net', active: true }],
+              { name: 'ALA', url: 'https://wax.eosweb.net', active: true }],
        disableNets: false,
        voteDonationAcc: 'cryptolions1',
        disableVoteDonation: false,

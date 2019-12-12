@@ -110,7 +110,7 @@ export class ScatterService {
     if ( isNaN(Number(quantity)) ){
           return console.error('Amount must be a number!');
     }
-    if (environment.frontConfig.coin === 'WAX'){
+    if (environment.frontConfig.coin === 'ALA'){
         this.decimals = 8;
     }
         let amount = parseFloat(`${quantity}`).toFixed(this.decimals);
@@ -180,7 +180,7 @@ export class ScatterService {
     if(!this.loginEOSService.accountName){
         return console.error('Identity error!!!');
     }
-    if (environment.frontConfig.coin === 'WAX'){
+    if (environment.frontConfig.coin === 'ALA'){
         this.decimals = 8;
     }
         let amount = Number(`${this.donation}`).toFixed(this.decimals);
@@ -246,7 +246,7 @@ export class ScatterService {
     if (!transfer.to.length || !transfer.amount.length){
         return this.loginEOSService.contractError({ message: 'Please type account To and Amount'});
     }
-    if (environment.frontConfig.coin === 'WAX'){
+    if (environment.frontConfig.coin === 'ALA'){
         this.decimals = 8;
     }
         let amount = Number(`${transfer.amount}`).toFixed(this.decimals) + ` ${transfer.symbol}`;
@@ -260,7 +260,7 @@ export class ScatterService {
   }
 
   generateContractTransaction(fields, method, contractFieldsRender) {
-      if (environment.frontConfig.coin === 'WAX'){
+      if (environment.frontConfig.coin === 'ALA'){
           this.decimals = 8;
       }
       let types = {};

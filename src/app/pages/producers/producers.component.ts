@@ -103,7 +103,7 @@ export class ProducersPageComponent implements OnInit, OnDestroy{
       if (!global || !global.rows || !global.rows[0] || !global.rows[0].total_activated_stake){
           return;
       }
-      /*if(this.frontConfig.coin === 'WAX'){
+      /*if(this.frontConfig.coin === 'ALA'){
           this.chainPercentage = (global.rows[0].total_activated_stake / 100000000 / supply * 100).toFixed(2);
           this.chainNumber = global.rows[0].total_activated_stake / supply * 100000;
       }*/
