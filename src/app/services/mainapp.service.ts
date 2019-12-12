@@ -113,7 +113,7 @@ export class MainService {
 
   getGlobalNetConfig(){
     if (!this.getCookie("netsConf")){
-      this.eosConfig.chainId = "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906";
+      this.eosConfig.chainId = "d4a9ba5d83e8b94c0aa2bb5c7da9ffa8b03330206c6f572557e995af00d031a9";
       this.eosConfig.httpEndpoint = "http://bp.cryptolions.io";
       return this.WINDOW.Eos(this.eosConfig);
     }

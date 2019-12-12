@@ -47,7 +47,7 @@ config.endpoints = [
 
 // eosjs
 config.eosConfig = {
-  chainId: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+  chainId: "d4a9ba5d83e8b94c0aa2bb5c7da9ffa8b03330206c6f572557e995af00d031a9",
   keyProvider: "",
   httpEndpoint: config.endpoints[0],
   expireInSeconds: 60,

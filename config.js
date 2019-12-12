@@ -39,14 +39,14 @@ config.telegram = {
 
 // reserve nodes
 config.endpoints = [
-	"http://52.15.100.105:8888",
-	"http://3.9.169.228:8888",
-	"http://54.158.252.143:8888"
+	"http://3.15.193.8:8888",
+	"http://35.176.152.109:8888",
+	"http://54.162.38.108:8888"
 ];
 
 // eosjs
 config.eosConfig = {
-  chainId: "adb9c9fa8846df31c635b927a32f3c3e3699f478a4a375ea81519debfdff6d7e",
+  chainId: "d4a9ba5d83e8b94c0aa2bb5c7da9ffa8b03330206c6f572557e995af00d031a9",
   keyProvider: "",
   httpEndpoint: config.endpoints[0],
   expireInSeconds: 60,
