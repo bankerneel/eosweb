@@ -16,7 +16,7 @@ For creating `config.js` file you need to see `config.example.js` (default confi
 ## Development server
 
 1. Run `npm start` for a dev server. Navigate to `http://172.31.21.56:4201/`. The app will automatically reload if you change any of the source files.
-2. Also in another terminal window you have to start your backend part - `node server/server.js` (`http://172.31.21.56:3039/`)
+2. Also in another terminal window you have to start your backend part - `node server/server.js` (`http://172.31.21.56:3040/`)
 
 ## Build and start
 

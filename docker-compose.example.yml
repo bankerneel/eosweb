@@ -16,7 +16,7 @@ services:
   eosweb:
     image: rost1337/eosweb:latest
     ports: 
-      - 3039:3039
+      - 3040:3040
       - 9615:9615
     restart: always
     links:
