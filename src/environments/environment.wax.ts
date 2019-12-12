@@ -25,8 +25,8 @@ export const environment = {
        customBalance: false,
        logo: '/assets/images/wax.png',
        name: {
-          big: 'wax',
-          small: 'web'
+          big: 'Aladin',
+          small: 'Explorer'
        },
        nets: [{ name: 'Mainnet', url: 'https://eosweb.net', active: false },
               { name: 'Jungle', url: 'https://jungle.eosweb.net', active: false },
