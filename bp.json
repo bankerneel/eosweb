@@ -1,6 +1,6 @@
 {
 	"producer_account_name": "eosio",
-	"producer_public_key": "EOS4uoyaGthackD4kjnLKNG2j7C65QQhAJ5aGHj7s3qNTur3DbVcT",
+	"producer_public_key": "EOS5c2J9YJ3129PRM6NpSW5rJiQzYt9fiF2XFwVuMz6hY1J2oiH32",
 	"org": {
 	"candidate_name": "eosio",
 	"website": "https://eosioproducer.com",
@@ -37,8 +37,8 @@
 			"longitude": 24.9375
 		},
 		"is_producer": true,
-		"p2p_endpoint": "http://3.15.193.8:4444",
-		"api_endpoint": "http://3.15.193.8:8888",
+		"p2p_endpoint": "http://52.15.100.105:4444",
+		"api_endpoint": "http://52.15.100.105:8888",
 		"ssl_endpoint": "https://explorer.aladinnetwork.org"
 	}]
 }
