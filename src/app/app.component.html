@@ -16,12 +16,12 @@
     <li *ngIf="!frontConfig?.customBalance"><button mat-button color="basic" routerLink="analytics" [ngClass]="{'nav-active': activeMenu() === '/analytics'}">Analytics</button></li>
     <li *ngIf="!frontConfig?.customBalance"><button mat-button color="basic" routerLink="ram" [ngClass]="{'nav-active': activeMenu()  === '/ram'}">Ram</button></li>
     <li><button mat-button color="basic" routerLink="producers" [ngClass]="{'nav-active': activeMenu()  === '/producers'}">Producers</button></li>
-    <li class="select-network" *ngIf="!frontConfig?.disableNets">
+    <!-- <li class="select-network" *ngIf="!frontConfig?.disableNets">
         <button mat-button [matMenuTriggerFor]="menu">{{netName}} <i class="fas fa-sort-down"></i></button>
         <mat-menu #menu="matMenu">
           <a *ngFor="let net of networks;" href="{{net?.url}}" mat-menu-item>{{net.name}}</a>
         </mat-menu>
-    </li>
+    </li> -->
     <li>
         <a class="telegram-button" (click)="darkEnable(!darkTheme)">
           <i class="fas fa-moon" *ngIf="!darkTheme"></i>
