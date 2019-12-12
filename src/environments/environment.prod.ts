@@ -38,7 +38,7 @@ export const environment = {
        version: '2.2.8',
        producers: 1000,
        social: [
-         { link: 'https://github.com/orange1337/eosweb', icon: 'fa-github' },
+         { link: 'https://github.com/ALADINIO/', icon: 'fa-github' },
          { link: 'https://www.facebook.com/EOSwebnet-199076424068961', icon: 'fa-facebook' },
          { link: 'https://www.reddit.com/user/eosweb', icon: 'fa-reddit-alien' },
          { link: 'https://medium.com/@EoswebN', icon: 'fa-medium' },
