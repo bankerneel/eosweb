@@ -1,4 +1,4 @@
-# EOSweb.net - vote for us [https://eosweb.net/vote](https://eosweb.net/vote)
+# AladinWeb.net - vote for us [https://aladinnetwork.org/vote](https://aladinnetwork.org/vote)
 
 [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4
 
@@ -26,4 +26,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-If you have any question, please welcome to our group [EOSweb Dev Chat](https://t.me/eoswebdevchat)
+If you have any question, please welcome to our group [AladinWeb Dev Chat](https://t.me/eoswebdevchat)

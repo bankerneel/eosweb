@@ -370,7 +370,7 @@ module.exports 	= (router, config, request, log, mongoMain, MARIA) => {
 	});
 
 	router.post('/api/producer', (req, res) => {
-		if (req.body.url && req.body.url.indexOf('eosweb.net') >= 0 ){
+		if (req.body.url && req.body.url.indexOf('aladinnetwork.org') >= 0 ){
 			return res.sendFile(path.join(__dirname, '../../bp.json'));
 		}
 	   	request.get(`${req.body.url}`).pipe(res);

@@ -23,7 +23,7 @@ module.exports = function(mongoMain){
 					return log.error(err);
 				}
 				bot.sendMessage(msg.chat.id, `
-				 Hello and welcome to EOSweb RAM bot alerts :)
+				 Hello and welcome to AladinWeb RAM bot alerts :)
 				 	Queries example:
 					- /high 0.34 (Set top RAM position)
 					- /low 0.26 
@@ -159,7 +159,7 @@ module.exports = function(mongoMain){
 							if (err){
 								   log.error(err);
 							}
-							let message = `ram price = ${ramPrice.toFixed(5)} EOS, https://eosweb.net/ram`;
+							let message = `ram price = ${ramPrice.toFixed(5)} EOS, https://aladinnetwork.org/ram`;
 							if (result && result.high){
 								result.high.forEach(elem => {
 								  	bot.sendMessage(elem.chatId, `High - ${message}`);

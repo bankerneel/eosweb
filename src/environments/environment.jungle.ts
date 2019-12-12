@@ -1,7 +1,7 @@
 const chain = 'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473';
 export const environment = {
     production: false,
-    appName: 'EOSweb Jungle Testnet',
+    appName: 'AladinWeb Jungle Testnet',
     network: {
         blockchain: 'eos',
         host: 'jungle2.cryptolions.io',
@@ -28,10 +28,10 @@ export const environment = {
           big: 'Aladin',
           small: 'Explorer'
        },
-       nets: [{ name: 'Mainnet', url: 'https://eosweb.net', active: false },
-              { name: 'Jungle', url: 'https://jungle.eosweb.net', active: true },
-              { name: 'Europechain', url: 'https://xec.eosweb.net', active: false },
-              { name: 'ALA', url: 'https://wax.eosweb.net', active: false }],
+       nets: [{ name: 'Mainnet', url: 'https://aladinnetwork.org', active: false },
+              { name: 'Jungle', url: 'https://jungle.aladinnetwork.org', active: true },
+              { name: 'Europechain', url: 'https://xec.aladinnetwork.org', active: false },
+              { name: 'ALA', url: 'https://wax.aladinnetwork.org', active: false }],
        disableNets: false,
        voteDonationAcc: 'lioninjungle',
        disableVoteDonation: false,

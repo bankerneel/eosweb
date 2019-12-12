@@ -11,7 +11,7 @@
     <input type="search" placeholder="Search by block, tx, account, address" [(ngModel)]="search" (keyup)="onKey($event)">
   </div>
   <ul class="pull-right main-nav-middle">
-    <li *ngIf="!frontConfig?.customBalance"><button mat-button color="basic" routerLink="wallet" [ngClass]="{'nav-active': activeMenu() === '/wallet'}" class="mobile-no">wallet</button></li>
+    <!-- <li *ngIf="!frontConfig?.customBalance"><button mat-button color="basic" routerLink="wallet" [ngClass]="{'nav-active': activeMenu() === '/wallet'}" class="mobile-no">wallet</button></li> -->
     <li *ngIf="!frontConfig?.customBalance"><button mat-button color="basic" routerLink="vote" [ngClass]="{'nav-active': activeMenu() === '/vote'}" class="mobile-no">vote</button></li>
     <li *ngIf="!frontConfig?.customBalance"><button mat-button color="basic" routerLink="analytics" [ngClass]="{'nav-active': activeMenu() === '/analytics'}">Analytics</button></li>
     <li *ngIf="!frontConfig?.customBalance"><button mat-button color="basic" routerLink="ram" [ngClass]="{'nav-active': activeMenu()  === '/ram'}">Ram</button></li>
@@ -41,7 +41,7 @@
        <li *ngFor="let elem of env.frontConfig.social;">
           <a [href]="elem.link" target="_blank"><i class="fab {{elem.icon}}" *ngIf="elem.link"></i></a>
       </li>
-      <li><a href="mailto:dev.eosweb.net@gmail.com">Support</a></li>
+      <li><a href="mailto:dev.aladinnetwork.org@gmail.com">Support</a></li>
   </ul>
    </div>
 </footer>
