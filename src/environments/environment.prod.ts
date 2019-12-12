@@ -17,16 +17,16 @@ export const environment = {
         verbose: false
     },
     frontConfig: {
-       coin: 'EOS',
+       coin: 'ALA',
        bp: 'bp.json',
        tokenContract: 'eosio.token',
-       totalBalance: 'EOS',
+       totalBalance: 'ALA',
        convertToUSD: true,
        customBalance: false,
        logo: '/assets/images/eosweb.png',
        name: {
-          big: 'eos',
-          small: 'web'
+          big: 'Aladin',
+          small: 'Explorer'
        },
        nets: [{ name: 'Mainnet', url: 'https://eosweb.net', active: true },
               { name: 'Jungle', url: 'https://jungle.eosweb.net', active: false },
