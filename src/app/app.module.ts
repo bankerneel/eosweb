@@ -39,7 +39,7 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { WidgetModule } from './components/ram_widget/widget.module';
 
 import { environment } from '../environments/environment';
-import { LoginEOSModule } from 'eos-ulm';
+import { LoginALAModule } from 'eos-ulm';
 
 import { ScatterService } from './services/scatter.service';
 
@@ -71,11 +71,11 @@ const socketConfig: SocketIoConfig = { url: '/', options: {
     //SimpleNotificationsModule.forRoot(),
     SocketIoModule.forRoot(socketConfig),
     LeafletModule.forRoot(),
-    LoginEOSModule.forRoot({
+    LoginALAModule.forRoot({
           appName: environment.appName,
-          httpEndpoint: environment.Eos.httpEndpoint,
+          httpEndpoint: environment.Ala.httpEndpoint,
           chain: environment.chain,
-          verbose: environment.Eos.verbose,
+          verbose: environment.Ala.verbose,
           blockchain: environment.network.blockchain,
           host: environment.network.host,
           port: environment.network.port,

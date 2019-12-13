@@ -17,7 +17,7 @@ export class VotePageComponent implements OnInit {
   vote = {
     voter: '',
     proxy: '',
-    producers: ['eoswebnetbp1', 'lonprdcr']
+    producers: ['aladinexplorernetbp1', 'lonprdcr']
   };
 
   visible = true;

@@ -1,5 +1,5 @@
 /*
-   Created by eoswebnetbp1
+   Created by aladinexplorernetbp1
 */
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
@@ -24,7 +24,7 @@ var API = new mongoose.Schema({
     type: Number,
     index: true
   },
-  balance_eos: {
+  balance_ala: {
     type: Number,
     index: true
   },

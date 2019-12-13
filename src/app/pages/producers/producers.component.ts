@@ -18,7 +18,7 @@ export class ProducersPageComponent implements OnInit, OnDestroy{
   spinner = false;
   displayedColumns = ['#', 'Name', 'Status', 'Url', 'Location', 'Total Votes', 'Rate', 'Rewards'];
   dataSource;
-  eosToInt = Math.pow(10, 13);
+  alaToInt = Math.pow(10, 13);
   totalProducerVoteWeight;
   sortedArray;
   votesToRemove;
@@ -41,8 +41,8 @@ export class ProducersPageComponent implements OnInit, OnDestroy{
 
   getBlockData(){
       this.spinner   = (this.firstLoad) ? true : false;
-  		let producers  = this.http.get(`/api/custom/get_table_rows/eosio/eosio/producers/${this.frontConfig.producers}`);
-      let global     = this.http.get(`/api/v1/get_table_rows/eosio/eosio/global/1`);
+  		let producers  = this.http.get(`/api/custom/get_table_rows/alaio/alaio/producers/${this.frontConfig.producers}`);
+      let global     = this.http.get(`/api/v1/get_table_rows/alaio/alaio/global/1`);
       let bpInfo     = this.http.get(`/api/v1/get_producers_bp_json`);
 
       forkJoin([producers, global, bpInfo])
@@ -51,7 +51,7 @@ export class ProducersPageComponent implements OnInit, OnDestroy{
                           this.totalProducerVoteWeight = Number(results[1].rows[0].total_producer_vote_weight);
                           this.bpJson = results[2];
                           this.globalTable = results[1];
-                          this.getSupplyEOS(this.globalTable);
+                          this.getSupplyALA(this.globalTable);
                           this.createTable(results[0], this.totalProducerVoteWeight, this.bpJson);
 
                           this.socket.on('producers', (data) => {
@@ -111,8 +111,8 @@ export class ProducersPageComponent implements OnInit, OnDestroy{
       this.chainNumber = global.rows[0].total_activated_stake / supply * 100000;
   }
 
-  getSupplyEOS(globalTable){
-    this.http.get(`/api/custom/get_table_rows/eosio.token/${this.frontConfig.coin}/stat/1`)
+  getSupplyALA(globalTable){
+    this.http.get(`/api/custom/get_table_rows/alaio.token/${this.frontConfig.coin}/stat/1`)
              .subscribe((res: any) => {
                 if (!res || !res.rows || !res.rows[0] || !res.rows[0].supply){
                     return;

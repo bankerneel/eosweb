@@ -27,7 +27,7 @@ export class AccountPageComponent implements OnInit, OnDestroy{
   displayedColumns = [ '#', 'tx', 'date', 'name', 'data'];
   code;
   tables = [];
-  eosRate;
+  alaRate;
   subscription;
   displayedColumnsPermissiopn = ['Permission', 'Address', 'Threshold', 'Weight'];
   dataSourcePermission;
@@ -84,7 +84,7 @@ export class AccountPageComponent implements OnInit, OnDestroy{
                           } else {
                             this.balance = (this.frontConfig.coin !== 'ALA') ? this.unstaked + staked / 10000 : this.unstaked + staked / 100000000;
                           } 
-                          this.eosRate = this.MainService.getEosPrice();
+                          this.alaRate = this.MainService.getAlaPrice();
                       },
                       (error) => {
                           console.error(error);

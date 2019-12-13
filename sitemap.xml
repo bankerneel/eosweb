@@ -7,18 +7,18 @@
 <url><loc>https://aladinnetwork.org/accounts</loc></url>
 <url><loc>https://aladinnetwork.org/producers</loc></url>
 <url><loc>https://aladinnetwork.org/api</loc></url>
-<url><loc>https://aladinnetwork.org/account/eosio.msig</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.token</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.ram</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.ramfee</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.names</loc></url>
+<url><loc>https://aladinnetwork.org/account/alaio.msig</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.token</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.ram</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.ramfee</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.names</loc></url>
       	<url><loc>https://aladinnetwork.org/account/</loc></url>
       	<url><loc>https://aladinnetwork.org/account/</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.stake</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.saving</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.bpay</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.vpay</loc></url>
-      	<url><loc>https://aladinnetwork.org/account/eosio.unregd</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.stake</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.saving</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.bpay</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.vpay</loc></url>
+      	<url><loc>https://aladinnetwork.org/account/alaio.unregd</loc></url>
       	<url><loc>https://aladinnetwork.org/account/b1</loc></url>
       	<url><loc>https://aladinnetwork.org/account/heztcnjtguge</loc></url>
       	<url><loc>https://aladinnetwork.org/account/heztcnjuhege</loc></url>

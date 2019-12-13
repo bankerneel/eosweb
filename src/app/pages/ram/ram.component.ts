@@ -21,7 +21,7 @@ export class RamPageComponent implements OnInit{
 
   spinner = false;
   displayedColumns = ['Tx', 'Type', 'Price', 'Amount', 'Date'];
-  eosToInt = Math.pow(10, 13);
+  alaToInt = Math.pow(10, 13);
   globalStat;
   curve = shape.curveMonotoneX;
   moment = moment;
@@ -34,9 +34,9 @@ export class RamPageComponent implements OnInit{
       gradient : true,
       showLegend : false,
       showXAxisLabel : false,
-      xAxisLabel : 'EOS',
+      xAxisLabel : 'ALA',
       showYAxisLabel : true,
-      yAxisLabel : 'EOS',
+      yAxisLabel : 'ALA',
       autoScale : true,
       timeline: true,
       fitContainer : true
@@ -55,7 +55,7 @@ export class RamPageComponent implements OnInit{
   }
 
   getGlobal(){
-      this.http.get(`/api/v1/get_table_rows/eosio/eosio/global/10`)
+      this.http.get(`/api/v1/get_table_rows/alaio/alaio/global/10`)
           .subscribe((res: any) => {
                           if (!res || !res.rows){
                               return console.error('data error', res);
@@ -107,17 +107,17 @@ export class RamPageComponent implements OnInit{
       this.getChart(date);
   }
 
-  buyChangeEOS(e) {
-      this.scatterService.buyRAM.kb = this.scatterService.buyRAM.eos / this.scatterService.ramPrice;
+  buyChangeALA(e) {
+      this.scatterService.buyRAM.kb = this.scatterService.buyRAM.ala / this.scatterService.ramPrice;
   }
   buyChangeKB(e) {
-      this.scatterService.buyRAM.eos = this.scatterService.ramPrice * this.scatterService.buyRAM.kb;
+      this.scatterService.buyRAM.ala = this.scatterService.ramPrice * this.scatterService.buyRAM.kb;
   }
-  sellChangeEOS(e) {
-      this.scatterService.sellRAM.kb = this.scatterService.sellRAM.eos / this.scatterService.ramPrice;
+  sellChangeALA(e) {
+      this.scatterService.sellRAM.kb = this.scatterService.sellRAM.ala / this.scatterService.ramPrice;
   }
   sellChangeKB(e) {
-      this.scatterService.sellRAM.eos = this.scatterService.ramPrice * this.scatterService.sellRAM.kb;
+      this.scatterService.sellRAM.ala = this.scatterService.ramPrice * this.scatterService.sellRAM.kb;
   }  
 
 

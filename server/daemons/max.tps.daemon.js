@@ -1,7 +1,7 @@
 /*
 	max TPS, APS daemons
 */ 
-const { eos, SETTINGS_DB, STATS_ACCOUNT_DB, log, config } = require('./header')('tps');
+const { ala, SETTINGS_DB, STATS_ACCOUNT_DB, log, config } = require('./header')('tps');
 const { asyncWrapper } = require('../utils/main.utils');
 const wrapper = new asyncWrapper(log);
 
@@ -22,7 +22,7 @@ async function getMaxTps(){
 		await wrapper.toStrong(settings.save());
 	}
 	
-	let info = await wrapper.toStrong(eos.getInfo({}));
+	let info = await wrapper.toStrong(ala.getInfo({}));
 	if (!info.last_irreversible_block_num){
 		return log.error('Cant get info from blockchain!');
 	}
@@ -40,7 +40,7 @@ async function getBlockRecursive(settings, info, elements){
 	if (elements.length === 0){
 		 return await wrapper.toStrong(settings.save());
 	}
-	let [err, block] = await wrapper.to(eos.getBlock({ block_num_or_id: blockNumber }));
+	let [err, block] = await wrapper.to(ala.getBlock({ block_num_or_id: blockNumber }));
 	if (err){
 		log.error('getMaxTps error - ', err);
 		return await getBlockRecursive(settings, info, elements);

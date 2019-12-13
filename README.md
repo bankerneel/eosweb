@@ -15,8 +15,8 @@ For creating `config.js` file you need to see `config.example.js` (default confi
 
 ## Development server
 
-1. Run `npm start` for a dev server. Navigate to `http://172.31.21.56:4201/`. The app will automatically reload if you change any of the source files.
-2. Also in another terminal window you have to start your backend part - `node server/server.js` (`http://172.31.21.56:3040/`)
+1. Run `npm start` for a dev server. Navigate to `http://127.0.1.1:4201/`. The app will automatically reload if you change any of the source files.
+2. Also in another terminal window you have to start your backend part - `node server/server.js` (`http://127.0.1.1:3040/`)
 
 ## Build and start
 
@@ -26,4 +26,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-If you have any question, please welcome to our group [AladinWeb Dev Chat](https://t.me/eoswebdevchat)
+If you have any question, please welcome to our group [AladinWeb Dev Chat](https://t.me/aladinexplorerdevchat)

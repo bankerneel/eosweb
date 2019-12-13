@@ -1,5 +1,5 @@
 /*
-   Created by eoswebnetbp1
+   Created by aladinexplorernetbp1
 */
 
 const async = require('async');
@@ -8,15 +8,15 @@ const config        = require(`../../${configName}`);
 
 let customFunctions = {};
 
-customFunctions.getLastBlocks = (eos, elements, callback) => {
+customFunctions.getLastBlocks = (ala, elements, callback) => {
 	let resultArr = [];
-	eos.getInfo({})
+	ala.getInfo({})
 	   	.then(result => { 
 	   		if (!result.head_block_num){
 	   			return callback('Cant get info from blockchain!');
 	   		}
 	   		async.each(elements, (elem, cb) => {
-	   			eos.getBlock({ block_num_or_id: result.head_block_num - elem })
+	   			ala.getBlock({ block_num_or_id: result.head_block_num - elem })
 	   				.then(block => {
 	   					resultArr.push(block);
 	   					cb();
@@ -41,7 +41,7 @@ customFunctions.getLastBlocks = (eos, elements, callback) => {
 };
 
 function getBlockOffset(){
-	  eos.getBlock({ block_num_or_id: result.head_block_num })
+	  ala.getBlock({ block_num_or_id: result.head_block_num })
 	     .then(block => {
 	     	    if (block.transactions && block.transactions.length > 0 && block.transactions.length < config.offsetElementsOnMainpage){
 					resultArr.push(block.transactions);

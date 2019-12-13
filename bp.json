@@ -1,9 +1,9 @@
 {
-	"producer_account_name": "eosio",
-	"producer_public_key": "EOS5e1bJT5kwMVhUNCMjFtM6zSruEE8TYWna5LPTc9MMd6amQfFcf",
+	"producer_account_name": "alaio",
+	"producer_public_key": "ALA5e1bJT5kwMVhUNCMjFtM6zSruEE8TYWna5LPTc9MMd6amQfFcf",
 	"org": {
-	"candidate_name": "eosio",
-	"website": "https://eosioproducer.com",
+	"candidate_name": "alaio",
+	"website": "https://alaioproducer.com",
 	"code_of_conduct": "",
 	"email": "",
 	"branding": {
@@ -19,13 +19,13 @@
 },
 	"social": {
 		"steemit": "@aladinnetwork.org",
-		"twitter": "EoswebN",
+		"twitter": "AlawebN",
 		"youtube": "",
-		"facebook": "EOSwebnet-199076424068961",
+		"facebook": "ALAwebnet-199076424068961",
 		"github": "orange1337",
-		"reddit": "eosweb",
+		"reddit": "aladinexplorer",
 		"keybase": "",
-		"telegram": "eosweb",
+		"telegram": "aladinexplorer",
 		"wechat": ""
 	}
 },

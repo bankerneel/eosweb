@@ -33,7 +33,7 @@ export class MainCustomizeChartsComponent implements OnInit{
   blockchainData;
   aggragationData;
   ramPrice;
-  //eos = this.MainService.getGlobalNetConfig();
+  //ala = this.MainService.getGlobalNetConfig();
   TPSliveTx = 0;
   usersOnline = 0;
   timeForUpdate = 5000;
@@ -51,7 +51,7 @@ export class MainCustomizeChartsComponent implements OnInit{
                   .subscribe(
                       (res: any) => {
                            this.currencyObj = res;
-                           this.mainService.setEosPrice(this.currencyObj);
+                           this.mainService.setAlaPrice(this.currencyObj);
                            setTimeout(() => { this.getData() }, this.timeForUpdate);
                       },
                       (error) => {
@@ -124,7 +124,7 @@ export class MainCustomizeChartsComponent implements OnInit{
   }
 
   getRam(){
-      this.http.get(`/api/v1/get_table_rows/eosio/eosio/rammarket/10`)
+      this.http.get(`/api/v1/get_table_rows/alaio/alaio/rammarket/10`)
           .subscribe((res: any) => {
                           this.countRamPrice(res);
                       },

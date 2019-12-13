@@ -8,7 +8,7 @@ module.exports = function(router, config, request, log) {
 	const indexPath = path.join(__dirname, '../../dist/index.html');
 
 	router.get('/', (req, res) => {
-		//res.cookie('netsConf', JSON.stringify(config.eosInfoConfigs), { path: '/' });
+		//res.cookie('netsConf', JSON.stringify(config.alaInfoConfigs), { path: '/' });
 	   	res.sendFile(indexPath);
 	});
 

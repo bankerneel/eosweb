@@ -1,5 +1,5 @@
 /*
-   Created by eoswebnetbp1
+   Created by aladinexplorernetbp1
 */
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;

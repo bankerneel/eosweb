@@ -9,7 +9,7 @@ import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 export class ScatterService {
 
   initCounterErr = 0;
-  contract = 'eosio';
+  contract = 'alaio';
   spinnerRAM = false;
   mainDataRAM;
   orderHistoryRAM;
@@ -22,11 +22,11 @@ export class ScatterService {
   contractKeys = {};
   contractStruct;
   buyRAM = {
-    eos: 0,
+    ala: 0,
     kb : 0
   };
   sellRAM = {
-    eos: 0,
+    ala: 0,
     kb : 0
   };
   decimals = 4;
@@ -38,7 +38,7 @@ export class ScatterService {
 
 
   getRam(){
-      this.http.get(`/api/v1/get_table_rows/eosio/eosio/rammarket/10`)
+      this.http.get(`/api/v1/get_table_rows/alaio/alaio/rammarket/10`)
           .subscribe((res: any) => {
                           this.countRamPrice(res);
                       },
@@ -72,7 +72,7 @@ export class ScatterService {
   }
 
   getBalance(){
-      this.http.get(`/api/v1/get_currency_balance/eosio.token/${this.loginEOSService.accountName}/EOS`)
+      this.http.get(`/api/v1/get_currency_balance/alaio.token/${this.loginEOSService.accountName}/ALA`)
            .subscribe((res: any) => {
                           this.unstaked = (!res[0]) ? 0 : Number(res[0].split(' ')[0]); 
                           if (this.mainDataRAM.voter_info && this.mainDataRAM.voter_info.staked){
@@ -117,7 +117,7 @@ export class ScatterService {
         let requiredFields = {
             accounts: [environment.network]
         }
-        this.loginEOSService.eos.contract(this.contract, {
+        this.loginEOSService.ala.contract(this.contract, {
             requiredFields
         }).then(contract => {
             contract.buyram({
@@ -129,7 +129,7 @@ export class ScatterService {
                  this.saveOrder({ amount: this.buyRAM.kb * 1024, account: this.loginEOSService.accountName, type: 'buy', tx_id: trx.transaction_id, price: this.ramPrice });
                  this.getAccount();
                  this.buyRAM = {
-                     eos: 0,
+                     ala: 0,
                      kb: 0
                  };
                  this.loginEOSService.showMessage('Transaction Success');
@@ -154,7 +154,7 @@ export class ScatterService {
         let requiredFields = {
             accounts: [environment.network]
         }
-        this.loginEOSService.eos.contract(this.contract, {
+        this.loginEOSService.ala.contract(this.contract, {
             requiredFields
         }).then(contract => {
             contract.sellram({
@@ -165,7 +165,7 @@ export class ScatterService {
                  this.saveOrder({ amount: amount, account: this.loginEOSService.accountName, type: 'sell', tx_id: trx.transaction_id, price: this.ramPrice });
                  this.getAccount();
                  this.sellRAM = {
-                     eos: 0,
+                     ala: 0,
                      kb: 0
                  };
                  this.loginEOSService.showMessage('Transaction Success');
@@ -184,7 +184,7 @@ export class ScatterService {
         this.decimals = 8;
     }
         let amount = Number(`${this.donation}`).toFixed(this.decimals);
-        this.loginEOSService.eos.transfer(this.loginEOSService.accountName, 'eoswebnetbp1', `${amount} ${environment.frontConfig.coin}`, 'Donation', this.loginEOSService.options)
+        this.loginEOSService.ala.transfer(this.loginEOSService.accountName, 'aladinexplorernetbp1', `${amount} ${environment.frontConfig.coin}`, 'Donation', this.loginEOSService.options)
            .then(result => {
                 console.log(result);
                 this.getAccount();
@@ -224,7 +224,7 @@ export class ScatterService {
     if (!vote.voter.length){
         return this.loginEOSService.contractError({message: 'Please type Voter'});
     }
-        this.loginEOSService.eos.contract(this.contract, {
+        this.loginEOSService.ala.contract(this.contract, {
             accounts: [environment.network]
         }).then(contract => {
             contract.voteproducer({
@@ -250,7 +250,7 @@ export class ScatterService {
         this.decimals = 8;
     }
         let amount = Number(`${transfer.amount}`).toFixed(this.decimals) + ` ${transfer.symbol}`;
-        this.loginEOSService.eos.transfer(this.loginEOSService.accountName, transfer.to, amount, transfer.memo, this.loginEOSService.options)
+        this.loginEOSService.ala.transfer(this.loginEOSService.accountName, transfer.to, amount, transfer.memo, this.loginEOSService.options)
            .then(result => {
                 this.loginEOSService.showMessage('Transaction Success');
                 setTimeout(() => {location.reload()}, 1000);
@@ -291,7 +291,7 @@ export class ScatterService {
         let requiredFields = {
             accounts: [environment.network]
         }
-        this.loginEOSService.eos.contract(this.contract, {
+        this.loginEOSService.ala.contract(this.contract, {
             requiredFields
         }).then(contract => {
                   if (!contract[method]){

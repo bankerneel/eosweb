@@ -13,8 +13,8 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=test123
 
-  eosweb:
-    image: rost1337/eosweb:latest
+  aladinexplorer:
+    image: rost1337/aladinexplorer:latest
     ports: 
       - 3040:3040
       - 9615:9615
@@ -22,5 +22,5 @@ services:
     links:
       - mongodb
     volumes:
-      - ./config.js:/home/eosweb/config.js
+      - ./config.js:/home/aladinexplorer/config.js
 

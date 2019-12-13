@@ -106,16 +106,16 @@ module.exports = function(mongoMain){
 			if (!msg && !msg.chat && !msg.chat.id){
 				return log.error('Wrong chat id 5', msg);
 			}
-			global.eos.getTableRows({
+			global.ala.getTableRows({
 	               json: true,
-	               code: "eosio",
-	               scope: "eosio",
+	               code: "alaio",
+	               scope: "alaio",
 	               table: "rammarket",
 	               limit: 10
 	           })
 	            .then(result => {
 					let ramPrice = countRamPrice(result);
-					bot.sendMessage(msg.chat.id, `ram price = ${ramPrice.toFixed(5)} EOS`);
+					bot.sendMessage(msg.chat.id, `ram price = ${ramPrice.toFixed(5)} ALA`);
 				});
 	});
 
@@ -145,21 +145,21 @@ module.exports = function(mongoMain){
 
 	function getRamPrice(){
 		setTimeout(() => {
-			global.eos.getTableRows({
+			global.ala.getTableRows({
 	               json: true,
-	               code: "eosio",
-	               scope: "eosio",
+	               code: "alaio",
+	               scope: "alaio",
 	               table: "rammarket",
 	               limit: 10
 	           })
 	            .then(result => {
 					let ramPrice = countRamPrice(result);
-					//log.info('==== ram', ramPrice, 'EOS');
+					//log.info('==== ram', ramPrice, 'ALA');
 					findActiveUsers(TELEGRAM_USERS, ramPrice, (err, result) => {
 							if (err){
 								   log.error(err);
 							}
-							let message = `ram price = ${ramPrice.toFixed(5)} EOS, https://aladinnetwork.org/ram`;
+							let message = `ram price = ${ramPrice.toFixed(5)} ALA, https://aladinnetwork.org/ram`;
 							if (result && result.high){
 								result.high.forEach(elem => {
 								  	bot.sendMessage(elem.chatId, `High - ${message}`);

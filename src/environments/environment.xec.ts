@@ -3,7 +3,7 @@ export const environment = {
     production: true,
     appName: 'XECweb',
     network: {
-        blockchain: 'eos',
+        blockchain: 'ala',
         host: 'api.xec.cryptolions.io',
         port: 443,
         protocol: 'https',
@@ -11,7 +11,7 @@ export const environment = {
         chainId: chain
     },
     chain: chain,
-    Eos: {
+    Ala: {
         httpEndpoint: 'https://api.xec.cryptolions.io',
         chainId: chain,
         verbose: false
@@ -19,7 +19,7 @@ export const environment = {
     frontConfig: {
        coin: 'XEC',
        bp: 'xec.json',
-       tokenContract: 'eosio.token',
+       tokenContract: 'alaio.token',
        totalBalance: 'XEC',
        convertToUSD: false,
        customBalance: false,
@@ -33,7 +33,7 @@ export const environment = {
               { name: 'Europechain', url: 'https://xec.aladinnetwork.org', active: true },
               { name: 'ALA', url: 'https://wax.aladinnetwork.org', active: false }],
        disableNets: false,
-       voteDonationAcc: 'eoswebnetbp1',
+       voteDonationAcc: 'aladinexplorernetbp1',
        disableVoteDonation: true,
        version: '1.0.0',
        producers: 100,

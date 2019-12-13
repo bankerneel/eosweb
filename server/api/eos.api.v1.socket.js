@@ -1,13 +1,13 @@
 /*
-   Created by eoswebnetbp1
+   Created by aladinexplorernetbp1
 */
 
 const configName      = (process.env.CONFIG) ? process.env.CONFIG : 'config';
 const config          = require(`../../${configName}`);
 
 const async           = require('async');
-const customFunctions = require('./eos.api.v1.custom');
-const EOS             = require('eosjs');
+const customFunctions = require('./ala.api.v1.custom');
+const ALA             = require('alaiojs');
 const request         = require('request');
 
 const { logWrapper } = require('../utils/main.utils');
@@ -57,7 +57,7 @@ module.exports = (io, mongoMain, metrics) => {
       let timeRequestStart = +new Date(); 
       async.parallel({
         info: cb => {
-          global.eos.getInfo({})
+          global.ala.getInfo({})
              .then(stat => {
                 cb(null, stat);
              })
@@ -67,7 +67,7 @@ module.exports = (io, mongoMain, metrics) => {
              });
         },
         blocks: cb => {
-          customFunctions.getLastBlocks(global.eos, blocks, (err, result) => {
+          customFunctions.getLastBlocks(global.ala, blocks, (err, result) => {
                       if (err){
                           log.error(err);
                           return cb('No result');
@@ -88,13 +88,13 @@ module.exports = (io, mongoMain, metrics) => {
           let date = +new Date();
           if (err){
              console.error('========= ', err);
-             // change nodeos API 
+             // change alanode API 
              //if (date > SOCKET_HANGUP_TIME){
                  changeAPI += 1;
                  changeAPI = (config.endpoints.length === changeAPI) ? 0 : changeAPI; 
-                 config.eosConfig.httpEndpoint = config.endpoints[changeAPI];
-                 global.eos = EOS(config.eosConfig);
-                 console.error('\x1b[33m%s\x1b[0m', `Change API to [${config.eosConfig.httpEndpoint}], socket error - ${err}`);
+                 config.alaConfig.httpEndpoint = config.endpoints[changeAPI];
+                 global.ala = ALA(config.alaConfig);
+                 console.error('\x1b[33m%s\x1b[0m', `Change API to [${config.alaConfig.httpEndpoint}], socket error - ${err}`);
                  //SOCKET_HANGUP_TIME = date + 60000;
               //}
           } else {
@@ -109,7 +109,7 @@ module.exports = (io, mongoMain, metrics) => {
 
   function getTPS(){
       let timeRequestStart = +new Date(); 
-      customFunctions.getLastBlocks(eos, [1, 2], (err, result) => {
+      customFunctions.getLastBlocks(ala, [1, 2], (err, result) => {
             if (err){
                 console.error(err);
                 return setTimeout(getTPS, getSleepTimeTPS(timeRequestStart));
@@ -123,8 +123,8 @@ module.exports = (io, mongoMain, metrics) => {
       let timeRequestStart = +new Date(); 
       let formData = { 
         json: true,
-        code: 'eosio',
-        scope: 'eosio',
+        code: 'alaio',
+        scope: 'alaio',
         table: 'producers',
         limit: 500
       };
@@ -169,10 +169,10 @@ module.exports = (io, mongoMain, metrics) => {
 
   function getRam(){
       let timeRequestStart = +new Date();
-      global.eos.getTableRows({
+      global.ala.getTableRows({
           json: true,
-          code: "eosio",
-          scope: "eosio",
+          code: "alaio",
+          scope: "alaio",
           table: "rammarket",
           limit: 10
       }).then(result => {

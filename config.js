@@ -1,5 +1,5 @@
 /*
-  App configuration example created by eoswebnetbp1
+  App configuration example created by aladinexplorernetbp1
 */
 const path = require('path');
 let config = {};
@@ -8,7 +8,7 @@ let config = {};
 config.PROD = false;
 
 // mongo uri and options
-config.MONGO_URI = process.env.MONGO_URI || 'mongodb://172.31.21.56:27017/7bpchain';
+config.MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.1.1:27017/7bpchain';
 config.MONGO_OPTIONS = {
     socketTimeoutMS: 30000,
     keepAlive: true,
@@ -18,7 +18,7 @@ config.MONGO_OPTIONS = {
 
 // cron processes (aggregation of main stat - actions, transactions, accounts, analytics)
 config.CRON = false;
-config.CRON_API = 'https://public.eosinfra.io';
+config.CRON_API = 'https://public.alainfra.io';
 
 // anable TPS APS daemon aggregation
 config.TPS_ENABLE = true;
@@ -48,8 +48,8 @@ config.endpoints = [
   "http://3.82.52.254:8888"
 ];
 
-// eosjs
-config.eosConfig = {
+// alaiojs
+config.alaConfig = {
   chainId: "6c74c33ba4a0b34c9bdcbdb9a4ca6a0e35137432bda6ceebb422e3c37ce38c86",
   keyProvider: "",
   httpEndpoint: config.endpoints[0],
@@ -71,7 +71,7 @@ config.historyChain = 'https://explorer.aladinnetwork.org';
 
 
 // tokens api
-config.tokensAPI = 'http://api.light.xeos.me/api/account/eos/';
+config.tokensAPI = 'http://api.light.xala.me/api/account/ala/';
 
 config.apiV = 'v1'; // api version
 config.RAM_UPDATE = 5 * 60 * 1000; // time for ram update - /api/api.*.socket

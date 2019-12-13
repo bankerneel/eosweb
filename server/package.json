@@ -1,5 +1,5 @@
 {
-  "name": "eosweb-server",
+  "name": "aladinexplorer-server",
   "version": "2.0.0",
   "description": "",
   "main": "server.js",
@@ -16,7 +16,7 @@
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
     "csv-parser": "^2.3.0",
-    "eosjs": "^16.0.9",
+    "alaiojs": "^20.0.2",
     "express": "^4.17.1",
     "helmet": "^3.18.0",
     "lodash": "^4.17.13",

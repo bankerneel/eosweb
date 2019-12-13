@@ -18,7 +18,7 @@ export class AnalyticsPageComponent implements OnInit{
   spinner = false;
   displayedColumns = ['#', 'Name', 'Balance', 'Staked', 'Unstaked'];
   dataSource;
-  eosToInt = Math.pow(10, 13);
+  alaToInt = Math.pow(10, 13);
   allvotes;
   globalStat;
   curve = shape.curveMonotoneX;
@@ -66,7 +66,7 @@ export class AnalyticsPageComponent implements OnInit{
   };
 
   getGlobal(){
-      this.http.get(`/api/v1/get_table_rows/eosio/eosio/global/10`)
+      this.http.get(`/api/v1/get_table_rows/alaio/alaio/global/10`)
           .subscribe((res: any) => {
                           if (!res || !res.rows){
                               return console.error('data error', res);
@@ -110,7 +110,7 @@ export class AnalyticsPageComponent implements OnInit{
             return;
         }
         let result = data.map(elem => {
-             return { name: elem.account_name, value: Math.floor(elem.balance_eos) }; 
+             return { name: elem.account_name, value: Math.floor(elem.balance_ala) }; 
         });
         result.shift();
         return result;

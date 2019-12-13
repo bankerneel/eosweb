@@ -39,7 +39,7 @@ async function getAccounts(settings){
 		console.error(e);
 		return;
 	}
-	if (settings.cursor_accounts > accounts.allEosAccounts){
+	if (settings.cursor_accounts > accounts.allAlaAccounts){
 			settings.cursor_accounts -= limit;
 			return;
 	}

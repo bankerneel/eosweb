@@ -1,6 +1,6 @@
 {
-	"producer_account_name": "eoswebnetbp1",
-	"producer_public_key": "EOS5sT6mdCkTBLZM8vZnwqmBpA6gjtbdSTEeGL2k26JQFnjaCg6j2",
+	"producer_account_name": "aladinexplorernetbp1",
+	"producer_public_key": "ALA5sT6mdCkTBLZM8vZnwqmBpA6gjtbdSTEeGL2k26JQFnjaCg6j2",
 	"org": {
 	"candidate_name": "AladinWeb",
 	"website": "https://aladinnetwork.org/",
@@ -19,13 +19,13 @@
 },
 	"social": {
 		"steemit": "@aladinnetwork.org",
-		"twitter": "EoswebN",
+		"twitter": "AlawebN",
 		"youtube": "",
-		"facebook": "EOSwebnet-199076424068961",
+		"facebook": "ALAwebnet-199076424068961",
 		"github": "orange1337",
-		"reddit": "eosweb",
+		"reddit": "aladinexplorer",
 		"keybase": "",
-		"telegram": "eosweb",
+		"telegram": "aladinexplorer",
 		"wechat": ""
 	}
 },

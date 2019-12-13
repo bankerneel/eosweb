@@ -11,7 +11,7 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item *ngFor="let elem of timeArray;" (click)="selectDay(elem)">{{ elem }}</button>
       </mat-menu>-->
-      <!--<a mat-mini-fab color="primary" class="pull-right alert-button" href="https://t.me/EOSwebRamBot" target="_blank"><i class="fas fa-bell"></i></a>-->
+      <!--<a mat-mini-fab color="primary" class="pull-right alert-button" href="https://t.me/ALAwebRamBot" target="_blank"><i class="fas fa-bell"></i></a>-->
       <div class="pull-right">
         <span class="widget-chart-btn" [ngClass]="{'widget-btn-active': elem === defaultTimeName}" *ngFor="let elem of timeArray;" (click)="selectDay(elem)">{{ elem }}</span>
       </div>
@@ -124,7 +124,7 @@
       <mat-tab label="Buy ram">
         <div class="col-sm-4">
             <mat-form-field>
-                <input matInput [placeholder]="frontConfig?.coin" [(ngModel)]="scatterService.buyRAM.eos" (ngModelChange)="buyChangeEOS($event)">
+                <input matInput [placeholder]="frontConfig?.coin" [(ngModel)]="scatterService.buyRAM.ala" (ngModelChange)="buyChangeALA($event)">
             </mat-form-field>
         </div>
         <div class="col-sm-4">
@@ -133,13 +133,13 @@
             </mat-form-field>
         </div>
         <div class="col-sm-3">
-               <button mat-raised-button color="primary" (click)="scatterService.funcBuyRAM(scatterService.buyRAM.eos)">Buy Ram</button>
+               <button mat-raised-button color="primary" (click)="scatterService.funcBuyRAM(scatterService.buyRAM.ala)">Buy Ram</button>
         </div>
       </mat-tab>
       <mat-tab label="Sell ram">
         <div class="col-sm-4">
             <mat-form-field>
-                <input matInput [placeholder]="frontConfig?.coin" [(ngModel)]="scatterService.sellRAM.eos" (ngModelChange)="sellChangeEOS($event)">
+                <input matInput [placeholder]="frontConfig?.coin" [(ngModel)]="scatterService.sellRAM.ala" (ngModelChange)="sellChangeALA($event)">
             </mat-form-field>
         </div>
         <div class="col-sm-4">

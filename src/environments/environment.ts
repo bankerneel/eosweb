@@ -8,7 +8,7 @@ export const environment = {
     production: false,
     appName: 'AladinWeb',
     network: {
-        blockchain: 'eos',
+        blockchain: 'ala',
         host: 'bp.cryptolions.io',
         port: 443,
         protocol: 'https',
@@ -16,7 +16,7 @@ export const environment = {
         chainId: chain
     },
     chain: chain,
-    Eos: {
+    Ala: {
         httpEndpoint: 'https://bp.cryptolions.io',
         chainId: chain,
         verbose: false
@@ -24,11 +24,11 @@ export const environment = {
     frontConfig: {
        coin: 'ALA',
        bp: 'bp.json',
-       tokenContract: 'eosio.token',
+       tokenContract: 'alaio.token',
        totalBalance: 'ALA',
        convertToUSD: true,
        customBalance: false,
-       logo: '/assets/images/eosweb.png',
+       logo: '/assets/images/aladinexplorer.png',
        name: {
           big: 'Aladin',
           small: 'Explorer'
@@ -38,7 +38,7 @@ export const environment = {
               { name: 'Europechain', url: 'https://xec.aladinnetwork.org', active: false },
               { name: 'ALA', url: 'https://wax.aladinnetwork.org', active: false }],
        disableNets: false,
-       voteDonationAcc: 'eoswebnetbp1',
+       voteDonationAcc: 'aladinexplorernetbp1',
        disableVoteDonation: false,
        version: '2.2.8',
        producers: 1000,
@@ -59,7 +59,7 @@ export const environment = {
     production: true,
     appName: 'ALAweb',
     network: {
-        blockchain: 'eos',
+        blockchain: 'ala',
         host: 'wax.cryptolions.io',
         port: 443,
         protocol: 'https',
@@ -67,7 +67,7 @@ export const environment = {
         chainId: chain
     },
     chain: chain,
-    Eos: {
+    Ala: {
         httpEndpoint: 'https://wax.cryptolions.io',
         chainId: chain,
         verbose: false
@@ -75,7 +75,7 @@ export const environment = {
     frontConfig: {
        coin: 'ALA',
        bp: 'bp.json',
-       tokenContract: 'eosio.token',
+       tokenContract: 'alaio.token',
        totalBalance: 'ALA',
        convertToUSD: true,
        customBalance: false,
@@ -95,11 +95,11 @@ export const environment = {
        producers: 1000,
        social: [
          { link: 'https://github.com/ALADINIO/', icon: 'fa-github' },
-         { link: 'https://www.facebook.com/EOSwebnet-199076424068961', icon: 'fa-facebook' },
-         { link: 'https://www.reddit.com/user/eosweb', icon: 'fa-reddit-alien' },
-         { link: 'https://medium.com/@EoswebN', icon: 'fa-medium' },
-         { link: 'https://twitter.com/EoswebN', icon: 'fa-twitter' },
-         { link: 'https://t.me/eoswebdevchat', icon: 'fa-telegram-plane' }
+         { link: 'https://www.facebook.com/ALAwebnet-199076424068961', icon: 'fa-facebook' },
+         { link: 'https://www.reddit.com/user/aladinexplorer', icon: 'fa-reddit-alien' },
+         { link: 'https://medium.com/@AlawebN', icon: 'fa-medium' },
+         { link: 'https://twitter.com/AlawebN', icon: 'fa-twitter' },
+         { link: 'https://t.me/aladinexplorerdevchat', icon: 'fa-telegram-plane' }
        ],
        liveTXenable: true
     }

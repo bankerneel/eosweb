@@ -1,5 +1,5 @@
 {
-  "name": "eosweb",
+  "name": "aladinexplorer",
   "version": "0.0.0",
   "scripts": {
     "start": "ng serve --port 4401 --proxy-config proxy.conf.json",

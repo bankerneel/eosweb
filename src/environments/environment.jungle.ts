@@ -3,7 +3,7 @@ export const environment = {
     production: false,
     appName: 'AladinWeb Jungle Testnet',
     network: {
-        blockchain: 'eos',
+        blockchain: 'ala',
         host: 'jungle2.cryptolions.io',
         port: 443,
         protocol: 'https',
@@ -11,7 +11,7 @@ export const environment = {
         chainId: chain
     },
     chain: chain,
-    Eos: {
+    Ala: {
         httpEndpoint: 'https://jungle2.cryptolions.io',
         chainId: chain,
         verbose: false
@@ -19,7 +19,7 @@ export const environment = {
     frontConfig: {
        coin: 'ALA',
        bp: 'bp.json',
-       tokenContract: 'eosio.token',
+       tokenContract: 'alaio.token',
        totalBalance: 'ALA',
        convertToUSD: true,
        customBalance: false,
@@ -39,11 +39,11 @@ export const environment = {
        producers: 500,
        social: [
          { link: 'https://github.com/ALADINIO/', icon: 'fa-github' },
-         { link: 'https://www.facebook.com/EOSwebnet-199076424068961', icon: 'fa-facebook' },
-         { link: 'https://www.reddit.com/user/eosweb', icon: 'fa-reddit-alien' },
-         { link: 'https://medium.com/@EoswebN', icon: 'fa-medium' },
-         { link: 'https://twitter.com/EoswebN', icon: 'fa-twitter' },
-         { link: 'https://t.me/eoswebdevchat', icon: 'fa-telegram-plane' }
+         { link: 'https://www.facebook.com/ALAwebnet-199076424068961', icon: 'fa-facebook' },
+         { link: 'https://www.reddit.com/user/aladinexplorer', icon: 'fa-reddit-alien' },
+         { link: 'https://medium.com/@AlawebN', icon: 'fa-medium' },
+         { link: 'https://twitter.com/AlawebN', icon: 'fa-twitter' },
+         { link: 'https://t.me/aladinexplorerdevchat', icon: 'fa-telegram-plane' }
        ],
        liveTXenable: true
     }

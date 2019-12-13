@@ -1,5 +1,5 @@
 /*
-  Created by eoswebnetbp1 
+  Created by aladinexplorernetbp1 
 */
 //require('appmetrics-dash').monitor();
 const express       = require('express');
@@ -18,8 +18,8 @@ const config        = require(`../${configName}`);
 const mongoose      = require("mongoose");
 mongoose.set('useCreateIndex', true);
 
-const EOS           = require('eosjs');
-global.eos          = EOS(config.eosConfig);
+const ALA           = require('alaiojs');
+global.ala          = ALA(config.alaConfig);
 
 const { logWrapper } = require('./utils/main.utils');
 const log            = new logWrapper('server');
@@ -40,7 +40,7 @@ const mongoMain = mongoose.createConnection(config.MONGO_URI, config.MONGO_OPTIO
       log.error(err);
       process.exit(1);
     }
-    log.info('[Connected to Mongo EOS] : 27017');
+    log.info('[Connected to Mongo ALA] : 27017');
 });
 mongoose.set('useCreateIndex', true);
 
@@ -76,7 +76,7 @@ server.on('listening', onListening);
 
 //========= socket io connection
 const io  = require('socket.io').listen(server);
-require(`./api/eos.api.${config.apiV}.socket`)(io, mongoMain, metrics);
+require(`./api/ala.api.${config.apiV}.socket`)(io, mongoMain, metrics);
 
 if (config.CRON){
     require('./daemons/init')();
@@ -95,7 +95,7 @@ app.use(function(req,res,next){
 app.use(express.static(path.join(__dirname, '../dist')));
 
 require('./router/main.router')(app, config, request, log);
-require(`./api/eos.api.${config.apiV}`)(app, config, request, log, mongoMain);
+require(`./api/ala.api.${config.apiV}`)(app, config, request, log, mongoMain);
 
 /*app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));

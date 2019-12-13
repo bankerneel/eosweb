@@ -17,10 +17,10 @@ export class WalletPageComponent implements OnInit {
       to: '',
       amount: '',
       memo: '',
-      symbol: 'EOS'
+      symbol: 'ALA'
   };
   contractMethod = '';
-  contractName = 'eosio';
+  contractName = 'alaio';
   contractField = {};
   contractFieldsRender = [];
   frontConfig = environment.frontConfig;
