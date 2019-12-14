@@ -18,7 +18,7 @@ const config        = require(`../${configName}`);
 const mongoose      = require("mongoose");
 mongoose.set('useCreateIndex', true);
 
-const ALA           = require('alaiojs');
+const ALA           = require('alaexplorerjs');
 global.ala          = ALA(config.alaConfig);
 
 const { logWrapper } = require('./utils/main.utils');

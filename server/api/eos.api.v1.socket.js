@@ -7,7 +7,7 @@ const config          = require(`../../${configName}`);
 
 const async           = require('async');
 const customFunctions = require('./ala.api.v1.custom');
-const ALA             = require('alaiojs');
+const ALA             = require('alaexplorerjs');
 const request         = require('request');
 
 const { logWrapper } = require('../utils/main.utils');

@@ -13,7 +13,7 @@ const config        = require(`../../${configName}`);
 const mongoose      = require("mongoose");
 mongoose.Promise  	= global.Promise;
 
-const ALA     		= require('alaiojs');
+const ALA     		= require('alaexplorerjs');
 config.alaConfig.httpEndpoint = (config.CRON) ? config.CRON_API : config.alaConfig.httpEndpoint;
 const ala     		= ALA(config.alaConfig);
 

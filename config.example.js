@@ -8,7 +8,7 @@ let config = {};
 config.PROD = false;
 
 // mongo uri and options
-config.MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.1.1:27017/7bpchain';
+config.MONGO_URI = process.env.MONGO_URI || 'mongodb://172.31.21.56:27017/7bpchain';
 config.MONGO_OPTIONS = {
     socketTimeoutMS: 30000,
     keepAlive: true,
@@ -45,7 +45,7 @@ config.endpoints = [
       'http://alabp-0.atticlab.net'
 ];
 
-// alaiojs
+// alaexplorerjs
 config.alaConfig = {
   chainId: "6c74c33ba4a0b34c9bdcbdb9a4ca6a0e35137432bda6ceebb422e3c37ce38c86",
   keyProvider: "",
